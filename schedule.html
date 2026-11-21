@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Festival Management - Schedule & Conflict</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MUSIC FESTIVAL MANAGEMENT</h1>
+
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="artists.html">Artists</a>
+      <a href="stage.html">Stage</a>
+      <a href="slot.html">Slot</a>
+      <a href="technical.html">Technical</a>
+      <a href="schedule.html" class="active">Schedule & Conflict</a>
+    </div>
+
+    <div class="box">
+      <h3>Assign Stage & Performance Time</h3>
+      <label>Select Artist:</label>
+      <select id="sArtist"></select>
+
+      <label>Select Stage:</label>
+      <select id="sStage"></select>
+
+      <label>Performance Date:</label>
+      <input type="date" id="sDate">
+
+      <label>Select Time Slot:</label>
+      <select id="sSlot"></select>
+
+      <button class="btn" onclick="addSchedule()">Book Stage Slot</button>
+      <p id="msg2" class="msg"></p>
+    </div>
+
+    <div class="box table-box">
+      <h3>Festival Schedule</h3>
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Time</th><th>Stage</th><th>Artist</th><th>Action</th></tr>
+        </thead>
+        <tbody id="scheduleTable"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>renderSchedule();</script>
+</body>
+</html>

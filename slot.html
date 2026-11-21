@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Festival Management - Slot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MUSIC FESTIVAL MANAGEMENT</h1>
+
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="artists.html">Artists</a>
+      <a href="stage.html">Stage</a>
+      <a href="slot.html" class="active">Slot</a>
+      <a href="technical.html">Technical</a>
+      <a href="schedule.html">Schedule & Conflict</a>
+    </div>
+
+    <div class="box">
+      <h3>Add Time Slot (From - To)</h3>
+
+      <label>From:</label>
+      <select id="fromHour" style="width:auto; display:inline-block;">
+        <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+        <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+        <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+        <option value="10" selected>10</option><option value="11">11</option><option value="12">12</option>
+      </select>
+      <select id="fromMin" style="width:auto; display:inline-block;">
+        <option value="00" selected>00</option>
+        <option value="30">30</option>
+      </select>
+      <select id="fromAmPm" style="width:auto; display:inline-block;">
+        <option value="AM" selected>AM</option>
+        <option value="PM">PM</option>
+      </select>
+
+      <label>To:</label>
+      <select id="toHour" style="width:auto; display:inline-block;">
+        <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+        <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+        <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+        <option value="10">10</option><option value="11">11</option><option value="12" selected>12</option>
+      </select>
+      <select id="toMin" style="width:auto; display:inline-block;">
+        <option value="00" selected>00</option>
+        <option value="30">30</option>
+      </select>
+      <select id="toAmPm" style="width:auto; display:inline-block;">
+        <option value="AM">AM</option>
+        <option value="PM" selected>PM</option>
+      </select>
+
+      <br>
+      <button class="btn" onclick="addSlot()">Add Slot</button>
+      <p id="msgSlot" class="msg"></p>
+    </div>
+
+    <div class="box table-box">
+      <h3>Available Time Slots</h3>
+      <table>
+        <thead>
+          <tr><th>No.</th><th>Time Slot</th><th>Action</th></tr>
+        </thead>
+        <tbody id="slotTable"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>renderSlots();</script>
+</body>
+</html>

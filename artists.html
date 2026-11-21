@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Festival Management - Artists</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MUSIC FESTIVAL MANAGEMENT</h1>
+
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="artists.html" class="active">Artists</a>
+      <a href="stage.html">Stage</a>
+      <a href="slot.html">Slot</a>
+      <a href="technical.html">Technical</a>
+      <a href="schedule.html">Schedule & Conflict</a>
+    </div>
+
+    <div class="box">
+      <h3>Add Artist Profile</h3>
+      <label>Artist Name:</label>
+      <input type="text" id="aName" placeholder="Enter artist name">
+
+      <label>Music Genre:</label>
+      <select id="aGenre">
+        <option value="">-- Select Genre --</option>
+        <option value="Rap">Rap</option>
+        <option value="Rock">Rock</option>
+        <option value="Jazz">Jazz</option>
+      </select>
+
+      <label>Technical Requirements:</label>
+      <div class="checks" id="techChecks"></div>
+
+      <button class="btn" onclick="addArtist()">Save Artist</button>
+      <p id="msg1" class="msg"></p>
+    </div>
+
+    <div class="box table-box">
+      <h3>Registered Artists</h3>
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Genre</th><th>Tech Gear</th><th>Action</th></tr>
+        </thead>
+        <tbody id="artistTable"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>renderArtists();</script>
+</body>
+</html>

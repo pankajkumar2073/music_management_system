@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Festival Management - Stage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MUSIC FESTIVAL MANAGEMENT</h1>
+
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="artists.html">Artists</a>
+      <a href="stage.html" class="active">Stage</a>
+      <a href="slot.html">Slot</a>
+      <a href="technical.html">Technical</a>
+      <a href="schedule.html">Schedule & Conflict</a>
+    </div>
+
+    <div class="box">
+      <h3>Add Stage</h3>
+      <label>Stage Name:</label>
+      <input type="text" id="stageName" placeholder="Enter stage name">
+      <button class="btn" onclick="addStage()">Add Stage</button>
+      <p id="msgStage" class="msg"></p>
+    </div>
+
+    <div class="box table-box">
+      <h3>Available Stages</h3>
+      <table>
+        <thead>
+          <tr><th>No.</th><th>Stage Name</th><th>Action</th></tr>
+        </thead>
+        <tbody id="stageTable"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>renderStages();</script>
+</body>
+</html>
