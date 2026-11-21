@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  padding: 15px;
+  padding: 10px;
   background-color: #f4f4f4;
   color: #222;
 }
@@ -14,7 +14,7 @@ body {
   max-width: 850px;
   margin: 0 auto;
   background: #fff;
-  padding: 15px;
+  padding: 12px;
   border: 1px solid #ccc;
 }
 
@@ -24,27 +24,28 @@ h1 {
   color: #fff;
   padding: 12px;
   margin-top: 0;
-  font-size: 20px;
+  font-size: 18px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: dotted 2px rgb(251, 3, 3);
   border-radius: 5px;
 }
 
 .nav {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   text-align: center;
 }
 
 .nav a {
   display: inline-block;
-  padding: 8px 12px;
-  margin: 4px;
+  padding: 7px 10px;
+  margin: 3px;
   cursor: pointer;
   border: 1px solid #444;
   background: #eee;
   font-weight: bold;
   text-decoration: none;
   color: #222;
+  font-size: 13px;
 }
 
 .nav a.active {
@@ -54,8 +55,8 @@ h1 {
 
 .box {
   border: 1px solid #ccc;
-  padding: 15px;
-  margin-bottom: 15px;
+  padding: 12px;
+  margin-bottom: 12px;
 }
 
 label {
@@ -101,6 +102,7 @@ select {
   border: none;
   padding: 5px 8px;
   cursor: pointer;
+  font-size: 12px;
 }
 
 .msg {
@@ -109,29 +111,68 @@ select {
   font-size: 14px;
 }
 
+/* Tables - mobile friendly */
 .table-box {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 8px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
-  min-width: 500px;
+  margin-top: 8px;
+  min-width: 320px;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 8px;
+  padding: 6px 8px;
   text-align: left;
-  font-size: 14px;
+  font-size: 13px;
+  white-space: nowrap;
 }
 
 th {
   background: #eee;
 }
 
-.home-text {
-  line-height: 1.6;
-  font-size: 15px;
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 6px;
+  }
+
+  .container {
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .nav a {
+    padding: 6px 8px;
+    font-size: 12px;
+    margin: 2px;
+  }
+
+  .box {
+    padding: 10px;
+  }
+
+  table {
+    min-width: 280px;
+  }
+
+  th, td {
+    padding: 5px 6px;
+    font-size: 12px;
+  }
+
+  .btn-del {
+    padding: 4px 6px;
+    font-size: 11px;
+  }
 }
